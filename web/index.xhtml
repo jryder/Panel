@@ -89,11 +89,29 @@
 
 
 
+	    <h1>PanelGroup no Simple Example</h1>   
+	    <h:form>
+		<h:panelGrid columns="2" border="1"  title="">
+		    <h:panelGroup>
+			Cell 1
+		    </h:panelGroup>
+		    <h:panelGroup>
+			Cell 2
+		    </h:panelGroup>
+		    <h:panelGroup>  
+			<h:outputText value="Data shows in " />
+			<h:outputText value="same cell" />  
+		    </h:panelGroup>
+		</h:panelGrid> 
+	    </h:form>
+
+
+
 	    <h1>PanelGrid with Header</h1>   
 	    <h:form>
 		<h:panelGrid columns="2" border="1"  title="">
 		    <f:facet name="header">
-			<h:outputText value="header facet"/>
+			<h:outputText value="Split header requires a dataTable tag"/>
 		    </f:facet>
 		    <h:outputText value="First Name"/>
 		    <h:inputText/>
@@ -110,8 +128,7 @@
 		</h:panelGrid> 
 	    </h:form>
 
-
-
+	    
 
 
 	    <h1>PanelGrid and PanelGroup</h1>
@@ -154,6 +171,37 @@
 		</h:panelGrid> 
 	    </h:form>  
 
+	    
+	  <!-- See this page for info on colspan
+	    http://stackoverflow.com/questions/3111081/how-to-give-colspan-and-rowspan-in-jsf-panelgrid 
+	  -->
+	    
+	 <h1>HTML Table with colspan</h1>    
+
+	    <table border="1px">
+
+		<tr>
+		    <td>1</td>
+		    <td>2</td>
+		    <td>3</td>
+		</tr>
+		<tr>
+		    <td colspan ="3">See this page for info on colspan: <a href ="http://stackoverflow.com/questions/3111081/how-to-give-colspan-and-rowspan-in-jsf-panelgrid">colspan</a> </td>
+		</tr>
+		<tr>
+		    <td>7</td>
+		    <td>8</td>
+		    <td>9</td>
+		</tr>
+		<tr>
+		    <td>10</td>
+		    <td>11</td>
+		    <td>12</td>
+		</tr>
+
+	    </table>     
+	    
+	    
 	</div>
     </h:body>
 </html>
